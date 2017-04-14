@@ -1,4 +1,4 @@
-package ribboneureka.server.domain;
+package ribboneureka.server.dto;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

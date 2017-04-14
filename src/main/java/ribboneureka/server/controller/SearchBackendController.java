@@ -1,11 +1,8 @@
 package ribboneureka.server.controller;
 
-import com.codahale.metrics.Counter;
-import com.codahale.metrics.annotation.Gauge;
 import com.codahale.metrics.annotation.Metered;
-import com.codahale.metrics.annotation.Metric;
 import com.codahale.metrics.annotation.Timed;
-import ribboneureka.server.domain.SearchResponse;
+import ribboneureka.server.dto.SearchResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
