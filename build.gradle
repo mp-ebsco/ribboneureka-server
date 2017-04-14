@@ -1,6 +1,10 @@
 // Build script executed before the actual gradle build script to do any pre-setup
 buildscript {
 
+    ext {
+        springMetricsVersion 	= '3.1.3'
+    }
+
     dependencies {
         // The dependency management plugin changes Gradle’s handling of a pom’s exclusions so that they behave as they do in Maven.
         // https://spring.io/blog/2015/02/23/better-dependency-management-for-gradle
@@ -51,18 +55,15 @@ repositories {
 dependencies {
 
     // Spring-Boot dependencies
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-jetty'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2'
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
 
     // Spring-Cloud dependencies
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config'
+    //compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-ribbon'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-turbine'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix-dashboard'
 
     // Jackson Dependencies
     compile group: 'com.fasterxml.jackson.module', 		name: 'jackson-module-parameter-names', version: "${project.ext['jacksonVersion']}", transitive: true
@@ -71,6 +72,9 @@ dependencies {
 
     // Log4j2 Dependency for SLF4J and Asynchronous logging
     compile group: 'com.lmax', name: 'disruptor', version: '3.3.6'
+
+    // Dropwizard Metrics
+    compile group: 'com.ryantenney.metrics',	name: 'metrics-spring', 			version: "${project.ext['springMetricsVersion']}", 	transitive: true
 }
 
 configurations.all {
