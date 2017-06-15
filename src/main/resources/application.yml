@@ -1,6 +1,6 @@
 spring:
   application:
-    name: platform.shared.ribboneurekademo.searchservice
+    name: platform.training.ribboneurekademo.searchservice
 
 server:
   port: 8088
