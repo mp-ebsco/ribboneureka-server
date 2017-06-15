@@ -1,5 +1,5 @@
 # Overview
-The 'platform.training.ribboneureka-server' project demonstrates a service registering with Eureka so other services can discover and access it.
+The `platform.training.ribboneureka-server` project demonstrates a service registering with Eureka so other services can discover and access it.
 
 It is a Spring Boot microservice that uses Spring Cloud Netflix for Netflix OSS Eureka service registration
 			  
