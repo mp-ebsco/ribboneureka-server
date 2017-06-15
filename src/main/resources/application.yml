@@ -1,12 +1,13 @@
 spring:
   application:
-    name: platform.training.ribboneurekademo.searchservice
+    name: platform.training.ribboneureka.searchservice
 
 server:
   port: 8088
 
 eureka:
   instance:
+    # This is the Eureka VIP (virtual IP, like a DNS name for addressability during discovery)
     instanceId: ${spring.application.name}
     nonSecurePort: ${server.port}
     statusPageUrlPath: ${server.contextPath}/info
