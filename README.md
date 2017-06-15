@@ -6,13 +6,13 @@ It is a Spring Boot microservice that uses Spring Cloud Netflix for Netflix OSS 
 
 ## How to Build
 
-	gradle clean build
+	$ gradle clean build
 	
 ## How to run
 
 ### Start Eureka Discover Service
 
-First download build and start the 'platform.shared.discoveryservice' located at: https://github.com/EBSCOIS/platform.shared.discoveryservice
+First download build and start the `platform.shared.discoveryservice` located at: https://github.com/EBSCOIS/platform.shared.discoveryservice
 
 Make sure you can access the Eureka Dashboard at: http://localhost:8761
 
@@ -20,7 +20,7 @@ Make sure you can access the Eureka Dashboard at: http://localhost:8761
 
 ### Start 'ribboneureka-server' Service
 
-    gradle bootRun
+    $ gradle bootRun
     
 Ensure the service is now registered in Eureka:
 
