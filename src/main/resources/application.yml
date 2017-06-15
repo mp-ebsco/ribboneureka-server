@@ -7,7 +7,7 @@ server:
 
 eureka:
   instance:
-#    instanceId: ${spring.application.name}
+    instanceId: ${spring.application.name}
     nonSecurePort: ${server.port}
     statusPageUrlPath: ${server.contextPath}/info
     healthCheckUrlPath: ${server.contextPath}/health

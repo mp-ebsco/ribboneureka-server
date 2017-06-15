@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchResponse {
     private String response;
 
-    @JsonCreator()
+    @JsonCreator
     public SearchResponse(@JsonProperty("response") String response) {
         this.response = response;
 
